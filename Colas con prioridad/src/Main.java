@@ -3,7 +3,6 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 /**
  * Clase Principal
@@ -13,8 +12,7 @@ import java.util.Scanner;
  */
 public class Main {
 	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		String expresion = "";
+		 VectorHeap<Pacientes> vector = new VectorHeap<>();
 		try {
 			
 			/*Abrimos el archivo de texto*/
@@ -30,9 +28,7 @@ public class Main {
                 String nombre = temp[0];
                 String descrip = temp[1];
                 String code = temp[2];
-                System.out.print(temp[0]+"\n");
-                System.out.print(temp[1]+"\n");
-                System.out.print(temp[2]+"\n");
+                vector.add(new Pacientes(nombre, descrip, code));
             }
 			
 			entrada.close();

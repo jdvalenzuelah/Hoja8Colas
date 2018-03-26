@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 /**
  * clase VectorHeap
  * @author Raul Monzon, 15014
@@ -5,7 +7,14 @@
  * @fecha 03/25/2018
  */
 public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
-
+	
+	protected Vector<E> data; 
+	
+	public VectorHeap()
+	{
+		data = new Vector<E>();
+	}
+	
 	@Override
 	public E getFirst() {
 		// TODO Auto-generated method stub
@@ -26,8 +35,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
 
 	@Override
 	public void add(E value) {
-		// TODO Auto-generated method stub
-		
+		data.add(value);
 	}
 
 	@Override
