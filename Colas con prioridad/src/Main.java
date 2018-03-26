@@ -30,6 +30,9 @@ public class Main {
                 String nombre = temp[0];
                 String descrip = temp[1];
                 String code = temp[2];
+                System.out.print(temp[0]+"\n");
+                System.out.print(temp[1]+"\n");
+                System.out.print(temp[2]+"\n");
             }
 			
 			entrada.close();
