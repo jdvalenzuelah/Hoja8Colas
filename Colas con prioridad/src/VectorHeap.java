@@ -71,6 +71,9 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see PriorityQueue#size()
+	 */
 	@Override
 	public int size() {
 		return this.data.size();
