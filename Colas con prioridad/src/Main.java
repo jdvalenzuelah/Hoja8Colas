@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
  * Clase Principal
@@ -12,6 +13,7 @@ import java.io.InputStreamReader;
  */
 public class Main {
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		 VectorHeap<Pacientes> vector = new VectorHeap<>();
 		try {
 			
@@ -37,6 +39,18 @@ public class Main {
 		catch (Exception e) {
 			/*Mensaje de error*/
 			System.err.println("Ocurrio un error " + e.getMessage());
+		}
+		
+		boolean pass = true;
+		while(pass) {
+			System.out.println("Presione enter para obtener el siguiente paciente");
+			sc.nextLine();
+			if(!vector.isEmpty()) {
+				System.out.println(vector.remove().toString() + "\n");
+			}else {
+				System.out.println("Cola vacia!");
+				pass = false;
+			}
 		}
 	}
 }
