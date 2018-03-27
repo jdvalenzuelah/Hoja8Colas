@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Colas con prioridad/Colas con prioridad.iml" filepath="$PROJECT_DIR$/Colas con prioridad/Colas con prioridad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Colas con prioridad JFC/Colas con prioridad JFC.iml" filepath="$PROJECT_DIR$/Colas con prioridad JFC/Colas con prioridad JFC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hoja8Colas.iml" filepath="$PROJECT_DIR$/Hoja8Colas.iml" />
+    </modules>
+  </component>
+</project>

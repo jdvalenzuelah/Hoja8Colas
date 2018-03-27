@@ -1,11 +1,3 @@
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertEquals;
-
-
- 	
 
 /**
  * clase PruebasHeap
@@ -13,6 +5,11 @@ import static org.junit.Assert.assertEquals;
  * @author David Valenzuela, 171001
  * @fecha 03/25/2018
  */
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
 class PruebasHeap {
 
 	/**
@@ -30,7 +27,7 @@ class PruebasHeap {
 		assertEquals(heap.getFirst(), Integer.valueOf(1));
 		
 	}
-
+	
 	/**
 	 * Prueba que se elimine el ultimo valor, y los restantes sean ordenados
 	 */
@@ -48,3 +45,4 @@ class PruebasHeap {
 		
 	}
 }
+
