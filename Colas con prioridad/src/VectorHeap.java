@@ -51,19 +51,8 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
 	 */
 	@Override
 	public void add(E value) {
-		if(value != null) {
-			data.add(value);
-			int indexValue = this.data.size() - 1;
-			int padre = this.padre(indexValue);
-
-			while(padre > 0 && value.compareTo(this.data.get(padre)) < 0){
-				this.data.set(indexValue, this.data.get(padre));
-				this.data.set(padre, value);
-				
-				indexValue = padre;
-				padre = this.padre(indexValue);
-			}			
-		}
+		data.add(value);
+		percolateUp(data.size()-1);
 	}
 
 	/* (non-Javadoc)
@@ -162,6 +151,26 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
 				return;
 			}
 		}
+	}
+	
+	/**
+	 * Codigo obtenido de ejemplo Canvas, codigo obtenido del libro.
+	 * @param root
+	 */
+	protected void percolateUp(int leaf)
+	// pre: 0 <= leaf < size
+	// post: moves node at index leaf up to appropriate position
+	{
+		int parent = padre(leaf);
+		E value = data.get(leaf);
+		while (leaf > 0 &&
+		(value.compareTo(data.get(parent)) < 0))
+		{
+			data.set(leaf,data.get(parent));
+			leaf = parent;
+			parent = padre(leaf);
+		}
+		data.set(leaf,value);
 	}
 
 }

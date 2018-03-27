@@ -52,5 +52,6 @@ public class Main {
 				pass = false;
 			}
 		}
+		sc.close();
 	}
 }
