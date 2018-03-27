@@ -1,20 +1,14 @@
-//Paquetes
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
-/**
- * Clase Principal con implementacion de VectorHeap
- * @author Raul Monzon, 15014
- * @author David Valenzuela, 171001
- * @fecha 03/25/2018
- */
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		 VectorHeap<Pacientes> vector = new VectorHeap<>();
+		PriorityQueue<Pacientes> queue = new PriorityQueue<>();
 		try {
 			
 			/*Abrimos el archivo de texto*/
@@ -30,7 +24,7 @@ public class Main {
                 String nombre = temp[0];
                 String descrip = temp[1];
                 String code = temp[2];
-                vector.add(new Pacientes(nombre, descrip, code));
+                queue.add(new Pacientes(nombre, descrip, code));
             }
 			
 			entrada.close();
@@ -42,11 +36,12 @@ public class Main {
 		}
 		
 		boolean pass = true;
+		
 		while(pass) {
-			System.out.println("Presione enter para obtener el siguiente paciente:");
+			System.out.println("Presione enter para obtener el siguiente paciente: ");
 			sc.nextLine();
-			if(!vector.isEmpty()) {
-				System.out.println(vector.remove().toString() + "\n");
+			if(queue.size() > 0) {
+				System.out.println(queue.poll().toString() + "\n");
 			}else {
 				System.out.println("Cola vacia!");
 				pass = false;
